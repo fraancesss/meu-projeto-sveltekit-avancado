@@ -14,10 +14,10 @@
     <div class="offcanvas-body">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="/01">Cap 01</a>
+          <a class="nav-link active" href="/04/external/users">Cap 01</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/02">Cap 02</a>
+          <a class="nav-link active" href="/04/external/users/[id]">Cap 02</a>
         </li>
       </ul>
     </div>
