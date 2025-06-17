@@ -1,4 +1,4 @@
-import { fail, redirect } from 'sveltejs/kit' ;
+import { fail, redirect } from '@sveltejs/kit' ;
 
 
 function contem(texto, caracteres) {
@@ -18,7 +18,7 @@ export const actions = {
         }
         if (!dados.nome || !dados.email || !dados.nascimento || !dados.senha || !dados.confirmacaosenha) dados.erros.push ('preencha todos os campos.') ;
         if (!dados.email.includes ('@')) dados.erros.push('email inválido.') ;
-        if (dados.senha ! = dados.confirmacaosenha) dados.erros.push ('senhas não conferem.') ;
+        if (dados.senha != dados.confirmacaosenha) dados.erros.push ('senhas não conferem.') ;
         if (!contem(dados.senha,"abcdefghijklmnopqrstuvwxyz")
             || !contem (dados.senha, "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
             || !contem (dados.senha, "0123456789")
@@ -28,9 +28,12 @@ export const actions = {
             let agora = new Date (), nasc = new Date (dados.nascimento) ;
             if (agora - nasc < 378691200000)
                 dados.erros.push ('Você ainda não completou 12 anos!') ;
-Q
+
 
             if (dados.erros.length > 0 ) return fail (400, dados) ;
+
+
+            redirect (303, '/06/profile');
     }
 };
 

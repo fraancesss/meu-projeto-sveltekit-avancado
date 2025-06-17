@@ -14,6 +14,7 @@ export const actions = {
 
     if (email == "email@inexistente") return fail(400, { error: 'Email ou senha inválidos.', email });
 
-    redirect(303, '/06/profile');
+    throw redirect(303, `/06/profile?email=${encodeURIComponent(email)}`);
+
   }
 };
