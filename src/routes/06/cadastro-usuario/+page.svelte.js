@@ -28,7 +28,7 @@ export const actions = {
             let agora = new Date (), nasc = new Date (dados.nascimento) ;
             if (agora - nasc < 378691200000)
                 dados.erros.push ('Você ainda não completou 12 anos!') ;
-
+Q
 
             if (dados.erros.length > 0 ) return fail (400, dados) ;
     }
