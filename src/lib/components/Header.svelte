@@ -2,7 +2,7 @@
   <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mySideBar" aria-label="toggleSidebar">
     <i class="bi bi-list"></i>
   </button>
-  <div class="caixa">
+
   <a class="navbar-brand" href="/">FrameWorks</a>
   <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarText" aria-label="toggleNavbar">
     <i class="bi bi-three-dots-vertical"></i>
@@ -15,13 +15,10 @@
     <div class="offcanvas-body">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="/04/external/users">Cap 01</a>
+          <a class="nav-link active" href="/06/ifms">exerc24/06</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/04/external/users/[id]">Cap 02</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="/06/cadastro-usuario">cadastro-usuario</a>
+          <a class="nav-link active" href="/06/cadastro-usuario">cadastro</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/06/profile">profile</a>
@@ -29,8 +26,20 @@
         <li class="nav-item">
           <a class="nav-link active" href="/06/post">post</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/06/teste">teste</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/06/ifms/a">a</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/06/ifms/b">b</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/06/ifms/c">c</a>
+        </li>
       </ul>
-    </div>
+  
     
   </div>
 </header>
