@@ -12,3 +12,15 @@
 <div class="letra1">Seu email:{$email}</div>
 
 
+<body>
+    <style>
+        body {
+            background-image: url('https://wallpapers.com/images/hd/gravity-falls-cipher-dipper-deal-1m7iq4tadgz22bnj.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 90vh;
+        }
+        
+    </style>
+</body>

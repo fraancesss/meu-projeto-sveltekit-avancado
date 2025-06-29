@@ -1,4 +1,14 @@
-<header class="navbar navbar-expand-lg bg-body-tertiary">
+<style>
+  .navbar-transparent{
+      background-color:rgba(255, 0, 0, 0.425);
+      backdrop-filter: blur(6px);
+      border-radius: 12px;
+      width: 500px;
+  }
+</style>
+
+
+<header class="navbar navbar-expand-lg navbar-transparent ">
   <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mySideBar" aria-label="toggleSidebar">
     <i class="bi bi-list"></i>
   </button>
@@ -18,13 +28,13 @@
           <a class="nav-link active" href="/06/ifms">exerc24/06</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/06/cadastro-usuario">cadastro</a>
+          <a class="nav-link active" href="/06/cadastro-usuario"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/06/profile">profile</a>
+          <a class="nav-link active" href="/06/profile"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/06/post">post</a>
+          <a class="nav-link active" href="/06/post"></a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/06/teste">teste</a>
@@ -39,7 +49,6 @@
           <a class="nav-link active" href="/06/ifms/c">c</a>
         </li>
       </ul>
-  
-    
+    </div>
   </div>
 </header>
