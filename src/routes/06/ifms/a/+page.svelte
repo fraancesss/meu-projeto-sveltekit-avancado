@@ -1,26 +1,33 @@
 <script lang="ts">
-    import { page } from '$app/stores';
-    import { derived } from 'svelte/store';
-  const email = derived(page, $page => $page.url.searchParams.get('email'));
-  </script>
-  
+  import { page } from '$app/stores';
+  import { derived } from 'svelte/store';
 
-<title>Boas-Vindas</title>
-<a>Gkds</a>
+
+  const numero = derived(page, $page => $page.url.searchParams.get('umnumero'));
+</script>
+
+
 
 <div class="letra2">Bem vindo!! : )</div>
-<div class="letra1">Seu email:{$email}</div>
+<div class="letra1">Seu número: {$numero}</div>
+
+
+
 
 
 <body>
     <style>
         body {
-            background-image: url('https://wallpapers.com/images/hd/gravity-falls-cipher-dipper-deal-1m7iq4tadgz22bnj.webp');
+             margin: 0;
+            padding: 0;
+            background-image: url('https://images.steamusercontent.com/ugc/2501272149854200488/009BA3D28A8D0D9DC193743F9F500FC5AB5A2D60/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
             background-size: cover;
+            background-repeat: no-repeat;
             background-position: center;
-            background-attachment: fixed;
-            height: 90vh;
+            height: 100vh;
         }
         
     </style>
 </body>
+
+
