@@ -25,7 +25,7 @@
     <div class="offcanvas-body">
       <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="/06/ifms">exerc24/06</a>
+          <a class="nav-link active" href="/06/ifms">exerc3</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/06/cadastro-usuario"></a>
@@ -37,7 +37,7 @@
           <a class="nav-link active" href="/06/post"></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="/06/teste">teste</a>
+          <a class="nav-link active" href="/06/cadastro-produto">CAD-produto</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="/06/ifms/a">a</a>
