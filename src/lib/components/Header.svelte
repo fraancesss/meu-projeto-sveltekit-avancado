@@ -48,6 +48,18 @@
         <li class="nav-item">
           <a class="nav-link active" href="/06/ifms/c">c</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="/06/inscricao">inscricao</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" href="/06/inscricao/basico">basico</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" href="/06/inscricao/intermediario">intermediario</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" href="/06/inscricao/premium">premium</a>
+        </li>
       </ul>
     </div>
   </div>
