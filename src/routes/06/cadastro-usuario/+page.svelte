@@ -12,7 +12,7 @@ let { form } = $props();
 </form>
 
 {#if form?.erros.length > 0}
-    {#each form.erros as erro}
+ {#each form.erros as erro}
     <p style="color: red">{erro}</p>
     {/each}
     {/if}

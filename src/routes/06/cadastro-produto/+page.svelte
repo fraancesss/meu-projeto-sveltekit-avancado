@@ -1,22 +1,25 @@
+
 <script>    
 let { form } = $props();
 </script>
 <h2>Cadastro de usuario</h2>
 <form method="POST">
-    <input name="nome" type="text" placeholder="Nome de usuário" value={form?.nome || ''} required/>
-    <input name="preco" type="preco" placeholder="Informe um Preco" value={form?.preco || ''} required/>
-    <input name="quantidade" type="number" value={form?.quantiade || ''} required/>
+    <div class="letra1">
+    <input name="nome" type="text" placeholder="Nome do Produto" value={form?.nome || ''} required/>
+    <input name="money" type="text" placeholder="R$00,00" value={form?.money || ''} required/>
+    <input name="quant" type="number" placeholder="quantidade" value={form?.quant || ''} required/>
+    
     <button>Cadastrar</button>
+    </div>
 </form>
 
 
-{#if form?.sucesso}
-    <p style="color: green">Produto {form.produto} cadastrado com sucesso!</p>
-{/if}
 
-
-
-
+{#if form?.sucesso.length > 0}
+ {#each form.sucesso as erro}
+    <p style="color: green">{sucesso}</p>
+    {/each}
+    {/if}
 
 <body>
     <style>
