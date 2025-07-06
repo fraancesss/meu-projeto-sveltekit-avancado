@@ -1,6 +1,7 @@
 <script>    
 let { form } = $props();
 </script>
+<div class="letra3">
 <h2>Cadastro de usuario</h2>
 <form method="POST">
     <input name="nome" type="text" placeholder="Nome de usuário" value={form?.nome || ''} required/>
@@ -16,3 +17,5 @@ let { form } = $props();
     <p style="color: red">{erro}</p>
     {/each}
     {/if}
+</div>
+

@@ -1,39 +1,49 @@
-
-<script>    
-let { form } = $props();
+<script>
+  export let form;
 </script>
-<h2>Cadastro de usuario</h2>
-<form method="POST">
-    <div class="letra1">
-    <input name="nome" type="text" placeholder="Nome do Produto" value={form?.nome || ''} required/>
-    <input name="money" type="text" placeholder="R$00,00" value={form?.money || ''} required/>
-    <input name="quant" type="number" placeholder="quantidade" value={form?.quant || ''} required/>
+
+{#if form?.error}
+  <p class="error">{form.error}</p>
+{/if}
+
+{#if form?.sucesso}
+  <p class="success">Produto {form.produto} cadastrado com sucesso!</p>
+{/if}
+<div class="letra3">
     
-    <button>Cadastrar</button>
-    </div>
+<form method="POST" class="form">
+  <div>
+
+    <label for="nome">Nome do Produto:</label><input id="nome" name="nome" type="text" value={form?.nome || ''} required />
+    
+  </div>
+
+  <div>
+    <label for="preco">Preço:</label> <input id="preco" name="preco" type="number" step="0.01" value={form?.preco || ''} required />
+   
+  </div>
+
+  <div>
+    <label for="quantidade">Quantidade em Estoque:</label>
+    <input id="quantidade" name="quantidade" type="number" value={form?.quantidade || ''} required />
+  </div>
+
+  <button type="submit">Cadastrar Produto</button>
 </form>
-
-
-
-{#if form?.sucesso.length > 0}
- {#each form.sucesso as erro}
-    <p style="color: green">{sucesso}</p>
-    {/each}
-    {/if}
-
-<body>
-    <style>
-        body {
-             margin: 0;
-            padding: 0;
-            background-image: url('https://images.steamusercontent.com/ugc/2501272149854200488/009BA3D28A8D0D9DC193743F9F500FC5AB5A2D60/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            height: 100vh;
-        }
-        
-    </style>
-</body>
-
-
+</div>
+<style>
+  .form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    gap: 1rem;
+  }
+  .error {
+    color: red;
+    font-weight: bold;
+  }
+  .success {
+    color: green;
+    font-weight: bold;
+  }
+</style>

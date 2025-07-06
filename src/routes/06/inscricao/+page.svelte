@@ -1,27 +1,68 @@
-
-<script>    
-let { form } = $props();
+<script lang="ts">
+  export let form;
 </script>
-<h2>Cadastro de usuário</h2>
-<form method="POST">
-    <div class="letra1">
-        <input name="cvv" type="text" placeholder="Código de segurança (CVV)" value={form?.cvv || ''} required />
-
-        {#if form?.erros?.cvv}
-            <p class="erro">{form.erros.cvv}</p>
-        {/if}
-
-        <button>Cadastrar</button>
-    </div>
-</form>
-
-
-{#if form?.erros.length > 0}
- {#each form.erros as erro}
-    <p style="color: red">{erro}</p>
-    {/each}
+<div class="letra3">
+<form method="POST" class="form">
+  <div>
+    <label>Nome no Cartão:</label>
+    <input name="nome" value={form?.data?.nome || ''} required />
+    {#if form?.errors?.nome}
+      <p class="error">{form.errors.nome}</p>
     {/if}
+  </div>
 
+  <div>
+    <label>Número do Cartão:</label>
+    <input name="numero" maxlength="16" value={form?.data?.numero || ''} required />
+    {#if form?.errors?.numero}
+      <p class="error">{form.errors.numero}</p>
+    {/if}
+  </div>
+
+  <div>
+    <label>Data de Validade (MM/AA):</label>
+    <input name="validade" placeholder="MM/AA" value={form?.data?.validade || ''} required />
+    {#if form?.errors?.validade}
+      <p class="error">{form.errors.validade}</p>
+    {/if}
+  </div>
+
+  <div>
+    <label>CVV:</label>
+    <input name="cvv" maxlength="3" value={form?.data?.cvv || ''} required />
+    {#if form?.errors?.cvv}
+      <p class="error">{form.errors.cvv}</p>
+    {/if}
+  </div>
+
+  <div>
+    <label>Plano:</label>
+    <select name="plano" required>
+      <option value="" disabled selected>Escolha um plano</option>
+      <option value="basico" selected={form?.data?.plano === 'basico'}>Plano Bit (básico)</option>
+      <option value="intermediario" selected={form?.data?.plano === 'intermediario'}>Plano Byte (intermediário)</option>
+      <option value="premium" selected={form?.data?.plano === 'premium'}>Plano Quantum (premium)</option>
+    </select>
+    {#if form?.errors?.plano}
+      <p class="error">{form.errors.plano}</p>
+    {/if}
+  </div>
+
+  <button type="submit">Pagar</button>
+</form>
+</div>
+<style>
+  .error {
+    color: red;
+    font-size: 0.9em;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 400px;
+  }
+</style>
 
 <body>
     <style>

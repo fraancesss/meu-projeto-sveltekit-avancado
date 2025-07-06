@@ -1,30 +1,30 @@
-import { fail, redirect } from '@sveltejs/kit' ;
+import { fail } from '@sveltejs/kit';
 
-
-function contem(texto, caracteres) {
-    for (const caractere of caracteres)
-        if (texto.includes(caractere)) return true ;
-    return false ;
-}
-
-
+/** @type {import('./$types').Actions} */
 export const actions = {
-    default: async ({ request }) => {
-        const data = await request.formData();
-        const dados = {
-            nome: data.get ('nome'), money: data.get ('money'), quant: data.get ('quant'), erros: []
-        }
-        if (!dados.nome || !dados.money || !dados.quant) dados.erros.push ('preencha todos os campos.') ;
-        
-        
-       
-       
+  default: async ({ request }) => {
+    const formData = await request.formData();
+    const nome = formData.get('nome')?.trim();
+    const preco = parseFloat(formData.get('preco'));
+    const quantidade = parseInt(formData.get('quantidade'), 10);
 
-
-            if (dados.erros.length > 0 ) return fail (400, dados) ;
-
-
-            
+    // Validações
+    if (!nome) {
+      return fail(400, { error: 'Nome obrigatório.', nome, preco: formData.get('preco'), quantidade: formData.get('quantidade') });
     }
-};
 
+    if (isNaN(preco) || preco <= 0) {
+      return fail(400, { error: 'Preço inválido.', nome, preco: formData.get('preco'), quantidade: formData.get('quantidade') });
+    }
+
+    if (isNaN(quantidade) || !Number.isInteger(quantidade) || quantidade < 1) {
+      return fail(400, { error: 'Quantidade inválida.', nome, preco: formData.get('preco'), quantidade: formData.get('quantidade') });
+    }
+
+    // Sucesso
+    return {
+      sucesso: true,
+      produto: nome
+    };
+  }
+};
