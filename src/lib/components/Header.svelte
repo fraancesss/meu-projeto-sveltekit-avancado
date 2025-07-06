@@ -3,7 +3,7 @@
       background-color:rgba(255, 0, 0, 0.425);
       backdrop-filter: blur(6px);
       border-radius: 12px;
-      width: 500px;
+      width: 730px;
   }
 </style>
 
