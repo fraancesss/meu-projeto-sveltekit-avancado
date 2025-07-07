@@ -80,7 +80,7 @@
     <a class="nav-link" href="/06/profile"></a>
     <a class="nav-link" href="/06/post"></a>
     <a class="nav-link" href="/06/cadastro-produto">CAD-produto</a>
-    <a class="nav-link" href="/06/ifms/a"></a>
+    <a class="nav-link" href="/04/pokemon">pokemon</a>
     <a class="nav-link" href="/06/ifms/b"></a>
     <a class="nav-link" href="/06/ifms/c"></a>
     <a class="nav-link" href="/06/inscricao">inscricao</a>
